@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import './calendar_widget.dart' show Calendar;
+import './calendar_widget.dart' show CalendarWidget;
 
 void main() {
   runApp(const MainApp());
@@ -29,11 +29,24 @@ class _HomeScaffold extends State<HomeScaffold> {
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
-      child: Center(
-        child: Calendar(
-          date: DateTime.now(),
-          startFromMonday: false,
-        )
+      
+      child: Column(
+      
+        children: [
+
+          Container(
+            
+            padding: const EdgeInsets.all(20),
+
+            child: CalendarWidget(
+              date: DateTime.now(),
+              startFromMonday: false,
+              weekdayTextSize: 15.0,
+              dayNumbersFontSize: 18.0,
+              dayNumbersVerticalPadding: 25,
+            )
+          )
+        ]
       )
     );
   }

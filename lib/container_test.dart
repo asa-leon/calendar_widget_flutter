@@ -4,8 +4,8 @@ import 'package:calendar_controller/calendar_controller.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class CalendarWidget extends StatelessWidget {
-  CalendarWidget({
+class ContainerTest extends StatelessWidget {
+  ContainerTest({
     super.key,
     required this.date,
     required this.startFromMonday,
@@ -36,12 +36,7 @@ class CalendarWidget extends StatelessWidget {
 
     return Container(
 
-      padding: const EdgeInsets.all(20),
-
-      decoration: BoxDecoration(
-        color: const Color.fromRGBO(191, 201, 199, 1),
-        borderRadius: BorderRadius.circular(5)
-      ),
+      color: const Color.fromRGBO(191, 201, 199, 1),
 
       child: Stack(
 
